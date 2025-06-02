@@ -5,266 +5,201 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Trivial de Adrián</title>
 <style>
-  /* Reset y estilos base */
-  * {
-    box-sizing: border-box;
-  }
   body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    color: #eee;
-    margin: 0; padding: 0;
-    display: flex; flex-direction: column; min-height: 100vh;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  header {
-    background: #004d99;
-    padding: 1.5rem;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #1e3c72, #2a5298);
+    color: white;
     text-align: center;
+    padding: 2rem;
+  }
+  h1 {
     font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    user-select: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  }
-  main {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 1rem;
-  }
-  #menu, #quiz, #resultado {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 2rem 2.5rem;
-    max-width: 720px;
-    width: 100%;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-    text-align: center;
-  }
-  #menu h2, #resultado h2 {
-    font-size: 2rem;
     margin-bottom: 1rem;
   }
-  button {
-    background: #007bff;
+  #question-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1rem auto;
+    max-width: 600px;
+  }
+  .btn {
+    display: block;
+    margin: 1rem auto;
+    padding: 1rem;
+    font-size: 1.2rem;
     border: none;
-    padding: 1rem 1.5rem;
-    margin: 0.75rem 0;
-    font-size: 1.3rem;
-    border-radius: 10px;
+    border-radius: 0.5rem;
+    background-color: #00c896;
     color: white;
     cursor: pointer;
-    width: 100%;
-    max-width: 350px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    user-select: none;
+    width: 80%;
   }
-  button:hover:not(:disabled) {
-    background: #0056b3;
-    transform: scale(1.05);
+  .btn:hover:not(:disabled) {
+    background-color: #00b384;
   }
-  button:disabled {
-    cursor: not-allowed;
-    opacity: 0.6;
+  .btn:disabled {
+    background-color: #444;
+    cursor: default;
   }
   #timer {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #ffdb58;
-    margin-bottom: 1.2rem;
-    text-align: right;
-    user-select: none;
+    font-size: 1.5rem;
+    margin-top: 1rem;
   }
-  #question {
-    font-size: 1.6rem;
-    margin-bottom: 1.8rem;
-    min-height: 90px;
-  }
-  #options button {
-    margin: 0.5rem 0;
-  }
-  button.correct {
-    background-color: #28a745 !important;
-    box-shadow: 0 0 12px #28a745aa;
-  }
-  button.wrong {
-    background-color: #dc3545 !important;
-    box-shadow: 0 0 12px #dc3545aa;
-  }
-  @media (max-width: 600px) {
-    header {
-      font-size: 1.8rem;
-      padding: 1rem;
-    }
-    #menu, #quiz, #resultado {
-      padding: 1.5rem 1.5rem;
-    }
-    button {
-      font-size: 1.1rem;
-      max-width: 100%;
-    }
-    #question {
-      font-size: 1.3rem;
-      min-height: 80px;
-    }
+  #result {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    min-height: 1.5em;
   }
 </style>
 </head>
 <body>
-
-<header>Bienvenidos al trivial de Adrián</header>
-
-<main>
-  <section id="menu">
-    <h2>¡Comienza el juego!</h2>
-    <button id="startBtn">Iniciar Trivial</button>
-  </section>
-
-  <section id="quiz" style="display:none;">
-    <div id="timer">Tiempo: 06:00</div>
-    <div id="question"></div>
-    <div id="options"></div>
-  </section>
-
-  <section id="resultado" style="display:none;">
-    <h2>¡Juego terminado!</h2>
-    <p id="scoreText"></p>
-    <button id="restartBtn">Jugar de nuevo</button>
-  </section>
-</main>
+  <h1>Bienvenidos al trivial de Adrián</h1>
+  <div id="timer">Tiempo restante: 06:00</div>
+  <div id="question-box">
+    <h2 id="question">Cargando pregunta...</h2>
+    <button class="btn" onclick="selectAnswer(0)" id="btn0"></button>
+    <button class="btn" onclick="selectAnswer(1)" id="btn1"></button>
+    <button class="btn" onclick="selectAnswer(2)" id="btn2"></button>
+    <button class="btn" onclick="selectAnswer(3)" id="btn3"></button>
+    <div id="result"></div>
+  </div>
 
 <script>
-  let tiempoTotal = 360; // 6 minutos en segundos
-  let timerInterval;
-  let puntuacion = 0;
-  let preguntasDisponibles = [];
-  let preguntaActual = 0;
+  // Ejemplo reducido de preguntas para que veas la estructura
+  const questions = {
+    "Frases sin terminar": [
+      { question: "A quien madruga...", options: ["Dios lo ayuda", "Se le cae el sueño", "Le duele la cabeza", "Se le va el tren"], answer: 0 },
+      { question: "Más vale pájaro en mano...", options: ["Que cien volando", "Que gato encerrado", "Que perro ladrando", "Que uno en la jaula"], answer: 0 },
+      { question: "No por mucho madrugar...", options: ["Amanece más temprano", "Se duerme mejor", "Se trabaja más", "Se corre más"], answer: 0 }
+    ],
+    "Deportes": [
+      { question: "¿Cuántos jugadores hay en un equipo de fútbol?", options: ["11", "10", "12", "9"], answer: 0 },
+      { question: "¿En qué deporte se usa un bate?", options: ["Béisbol", "Fútbol", "Baloncesto", "Natación"], answer: 0 },
+      { question: "¿Cuántos minutos dura un partido de baloncesto profesional?", options: ["48", "60", "90", "30"], answer: 0 }
+    ],
+    "Brote psicótico": [
+      { question: "¿Cuál es un síntoma típico de un brote psicótico?", options: ["Alucinaciones", "Dolor muscular", "Fiebre", "Cansancio"], answer: 0 },
+      { question: "¿Qué tipo de tratamiento es común en un brote psicótico?", options: ["Antipsicóticos", "Antibióticos", "Antiinflamatorios", "Analgésicos"], answer: 0 }
+    ]
+    // Añade aquí más categorías y preguntas siguiendo la estructura
+  };
 
-  const menu = document.getElementById('menu');
-  const quiz = document.getElementById('quiz');
-  const resultado = document.getElementById('resultado');
+  const categories = Object.keys(questions);
+  let usedQuestions = new Set();
+  let currentCategoryIndex = 0;
+  let currentQuestionIndex = null;
+  let timer = null;
+  let timeLeft = 360; // 6 minutos en segundos
 
-  const startBtn = document.getElementById('startBtn');
-  const restartBtn = document.getElementById('restartBtn');
-
-  const timerEl = document.getElementById('timer');
-  const questionEl = document.getElementById('question');
-  const optionsEl = document.getElementById('options');
-  const scoreText = document.getElementById('scoreText');
-
-  startBtn.addEventListener('click', cargarPreguntasYIniciar);
-  restartBtn.addEventListener('click', reiniciarJuego);
-
-  function cargarPreguntasYIniciar() {
-    fetch('questions.json')
-      .then(response => {
-        if (!response.ok) throw new Error('No se pudo cargar questions.json');
-        return response.json();
-      })
-      .then(data => {
-        preguntasDisponibles = shuffleArray(data);
-        iniciarJuego();
-      })
-      .catch(error => {
-        alert('Error cargando las preguntas: ' + error.message);
-      });
-  }
-
-  function iniciarJuego() {
-    puntuacion = 0;
-    preguntaActual = 0;
-    menu.style.display = 'none';
-    resultado.style.display = 'none';
-    quiz.style.display = 'block';
-    tiempoTotal = 360;
-    mostrarPregunta();
-    iniciarTemporizador();
-  }
-
-  function reiniciarJuego() {
-    tiempoTotal = 360;
-    mostrarPregunta();
-    iniciarTemporizador();
-    resultado.style.display = 'none';
-    quiz.style.display = 'block';
-  }
-
-  function iniciarTemporizador() {
-    clearInterval(timerInterval);
-    actualizarTimer();
-    timerInterval = setInterval(() => {
-      tiempoTotal--;
-      if (tiempoTotal <= 0) {
-        clearInterval(timerInterval);
-        finalizarJuego();
+  function startTimer() {
+    updateTimerDisplay();
+    timer = setInterval(() => {
+      timeLeft--;
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        finishGame("Se acabó el tiempo. ¡Gracias por jugar!");
+        return;
       }
-      actualizarTimer();
+      updateTimerDisplay();
     }, 1000);
   }
 
-  function actualizarTimer() {
-    const minutos = Math.floor(tiempoTotal / 60);
-    const segundos = tiempoTotal % 60;
-    timerEl.textContent = `Tiempo: ${minutos.toString().padStart(2,'0')}:${segundos.toString().padStart(2,'0')}`;
+  function updateTimerDisplay() {
+    let min = Math.floor(timeLeft / 60).toString().padStart(2, '0');
+    let sec = (timeLeft % 60).toString().padStart(2, '0');
+    document.getElementById('timer').textContent = `Tiempo restante: ${min}:${sec}`;
   }
 
-  function mostrarPregunta() {
-    if (preguntaActual >= preguntasDisponibles.length) {
-      finalizarJuego();
+  function disableButtons() {
+    for (let i=0; i<4; i++) {
+      document.getElementById('btn'+i).disabled = true;
+    }
+  }
+
+  function enableButtons() {
+    for (let i=0; i<4; i++) {
+      document.getElementById('btn'+i).disabled = false;
+      document.getElementById('btn'+i).style.backgroundColor = '#00c896';
+    }
+  }
+
+  function nextQuestion() {
+    if (usedQuestions.size === categories.length * 50) {
+      finishGame("¡Has completado todas las preguntas!");
       return;
     }
-    const pregunta = preguntasDisponibles[preguntaActual];
-    questionEl.textContent = `[${pregunta.category}] ${pregunta.question}`;
-    optionsEl.innerHTML = '';
 
-    pregunta.options.forEach((opcion, i) => {
-      const btn = document.createElement('button');
-      btn.textContent = opcion;
-      btn.addEventListener('click', () => responder(i));
-      optionsEl.appendChild(btn);
-    });
-  }
+    // Ciclamos entre categorías
+    let tries = 0;
+    while(tries < 1000) {
+      let catIndex = currentCategoryIndex % categories.length;
+      let category = categories[catIndex];
+      let catQuestions = questions[category];
 
-  function responder(indiceSeleccionado) {
-    const pregunta = preguntasDisponibles[preguntaActual];
-    const botones = optionsEl.querySelectorAll('button');
-    botones.forEach((btn, i) => {
-      btn.disabled = true;
-      if (i === pregunta.correctIndex) btn.classList.add('correct');
-      if (i === indiceSeleccionado && i !== pregunta.correctIndex) btn.classList.add('wrong');
-    });
+      // Seleccionar pregunta aleatoria
+      let qIndex = Math.floor(Math.random() * catQuestions.length);
+      let key = `${category}-${qIndex}`;
 
-    if (indiceSeleccionado === pregunta.correctIndex) puntuacion++;
-    preguntaActual++;
-
-    setTimeout(() => {
-      if (preguntaActual < preguntasDisponibles.length && tiempoTotal > 0) {
-        mostrarPregunta();
-      } else {
-        finalizarJuego();
+      if (!usedQuestions.has(key)) {
+        currentCategoryIndex++;
+        currentQuestionIndex = qIndex;
+        usedQuestions.add(key);
+        showQuestion(catQuestions[qIndex]);
+        return;
       }
-    }, 1200);
-  }
-
-  function finalizarJuego() {
-    clearInterval(timerInterval);
-    quiz.style.display = 'none';
-    resultado.style.display = 'block';
-    scoreText.textContent = `Has respondido correctamente ${puntuacion} de ${preguntasDisponibles.length} preguntas.`;
-  }
-
-  function shuffleArray(array) {
-    for(let i = array.length -1; i > 0; i--){
-      const j = Math.floor(Math.random() * (i+1));
-      [array[i], array[j]] = [array[j], array[i]];
+      currentCategoryIndex++;
+      tries++;
     }
-    return array;
+    // Si no hay pregunta, terminar juego
+    finishGame("No hay más preguntas disponibles.");
   }
-</script>
 
+  function showQuestion(q) {
+    document.getElementById('question').textContent = q.question;
+    for(let i=0; i<4; i++) {
+      const btn = document.getElementById('btn'+i);
+      btn.textContent = q.options[i];
+      btn.disabled = false;
+      btn.style.backgroundColor = '#00c896';
+    }
+    document.getElementById('result').textContent = '';
+  }
+
+  function selectAnswer(selected) {
+    disableButtons();
+    // Obtenemos la categoría y pregunta actual para comprobar respuesta
+    const catIndex = (currentCategoryIndex - 1 + categories.length) % categories.length;
+    const category = categories[catIndex];
+    const correctAnswer = questions[category][currentQuestionIndex].answer;
+
+    if (selected === correctAnswer) {
+      document.getElementById('result').textContent = "¡Correcto!";
+      document.getElementById('result').style.color = 'lightgreen';
+      document.getElementById('btn' + selected).style.backgroundColor = '#28a745';
+    } else {
+      document.getElementById('result').textContent = `Incorrecto. La respuesta correcta es: ${questions[category][currentQuestionIndex].options[correctAnswer]}`;
+      document.getElementById('result').style.color = 'red';
+      document.getElementById('btn' + selected).style.backgroundColor = '#dc3545';
+      document.getElementById('btn' + correctAnswer).style.backgroundColor = '#28a745';
+    }
+
+    setTimeout(nextQuestion, 1500);
+  }
+
+  function finishGame(msg) {
+    document.getElementById('question').textContent = msg;
+    for(let i=0; i<4; i++) {
+      const btn = document.getElementById('btn'+i);
+      btn.style.display = 'none';
+    }
+    document.getElementById('result').textContent = '';
+    clearInterval(timer);
+  }
+
+  // Iniciamos juego y temporizador
+  nextQuestion();
+  startTimer();
+</script>
 </body>
 </html>
