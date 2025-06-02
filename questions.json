@@ -1,4 +1,5 @@
-{
+
+  {
     "category": "Brote psicótico",
     "question": "¿Cuál es una posible causa biológica de un brote psicótico?",
     "options": [
@@ -372,7 +373,7 @@
     ],
     "correctIndex": 0
   },
-  {
+  
     "category": "Brote psicótico",
     "question": "¿Qué es el 'síndrome neuroléptico maligno'?",
     "options": [
@@ -920,7 +921,7 @@
     "correctIndex": 0
   }
 ]
-[
+
   {
     "category": "Frases sin terminar",
     "question": "Más vale pájaro en mano...",
