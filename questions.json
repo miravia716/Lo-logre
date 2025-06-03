@@ -1,82 +1,662 @@
 [
   {
-    "pregunta": "¿Qué truco ayuda a que una salsa no se corte al calentarla?",
-    "opciones": {
-      "A": "Cocinarla a fuego alto rápidamente",
-      "B": "Añadir una cucharadita de maicena o harina",
-      "C": "Agregar más aceite cuando hierva",
-      "D": "Taparla mientras hierve"
-    },
-    "respuesta_correcta": "B"
+    "category": "Trucos de Cocina",
+    "question": "¿Qué ingrediente ayuda a que las papas fritas queden más crujientes? (Nivel difícil #1)",
+    "options": [
+      "Harina",
+      "Vinagre",
+      "Azúcar",
+      "Limón"
+    ],
+    "correctIndex": 1
   },
   {
-    "pregunta": "¿Cuál es una técnica eficaz para lograr una carne jugosa al hornear?",
-    "opciones": {
-      "A": "Hornearla sin marinar",
-      "B": "Sellarla antes de hornear",
-      "C": "Cortarla en trozos pequeños antes de hornear",
-      "D": "Hornearla a máxima temperatura desde el inicio"
-    },
-    "respuesta_correcta": "B"
+    "category": "Trucos de Cocina",
+    "question": "¿Cuál es el mejor truco para evitar que los huevos se agrieten al hervirlos? (Nivel difícil #2)",
+    "options": [
+      "Añadir sal",
+      "Agregar vinagre",
+      "Pincharlos con una aguja",
+      "Hervirlos a fuego alto"
+    ],
+    "correctIndex": 2
   },
   {
-    "pregunta": "¿Para qué sirve meter una cuchara de madera sobre una olla de agua hirviendo?",
-    "opciones": {
-      "A": "Acelera la cocción",
-      "B": "Evita que el agua se desborde",
-      "C": "Reduce la salinidad",
-      "D": "Mejora el sabor"
-    },
-    "respuesta_correcta": "B"
+    "category": "Trucos de Cocina",
+    "question": "¿Qué se recomienda hacer para que el arroz no se pegue? (Nivel difícil #3)",
+    "options": [
+      "Añadir limón",
+      "Enjuagarlo antes de cocer",
+      "Usar olla de hierro",
+      "Remover constantemente"
+    ],
+    "correctIndex": 1
   },
   {
-    "pregunta": "¿Qué ingrediente ayuda a que las claras de huevo se monten mejor al punto de nieve?",
-    "opciones": {
-      "A": "Agua fría",
-      "B": "Unas gotas de zumo de limón o vinagre",
-      "C": "Una cucharadita de mantequilla",
-      "D": "Una pizca de azúcar moreno"
-    },
-    "respuesta_correcta": "B"
+    "category": "Trucos de Cocina",
+    "question": "¿Cuál es el mejor truco para evitar que los huevos se agrieten al hervirlos? (Nivel difícil #4)",
+    "options": [
+      "Añadir sal",
+      "Agregar vinagre",
+      "Pincharlos con una aguja",
+      "Hervirlos a fuego alto"
+    ],
+    "correctIndex": 2
   },
   {
-    "pregunta": "¿Cómo se puede recuperar una mayonesa casera que se ha cortado?",
-    "opciones": {
-      "A": "Calentándola",
-      "B": "Agregando una yema nueva y batiendo desde cero",
-      "C": "Añadiendo agua caliente",
-      "D": "Dejándola reposar 15 minutos"
-    },
-    "respuesta_correcta": "B"
+    "category": "Trucos de Cocina",
+    "question": "¿Qué se debe hacer para pelar tomates fácilmente? (Nivel difícil #5)",
+    "options": [
+      "Meterlos al congelador",
+      "Cocerlos con piel",
+      "Sumergirlos en agua hirviendo y luego en agua fría",
+      "Usar un cuchillo de sierra"
+    ],
+    "correctIndex": 2
   },
   {
-    "pregunta": "¿Qué se debe hacer con las papas antes de freírlas para que queden más crujientes?",
-    "opciones": {
-      "A": "Congelarlas",
-      "B": "Dejarlas en leche",
-      "C": "Remojarlas en agua y secarlas bien",
-      "D": "Añadir harina antes de freír"
-    },
-    "respuesta_correcta": "C"
+    "category": "Trucos de Cocina",
+    "question": "¿Qué ingrediente ácido ayuda a que las claras de huevo monten mejor al batirlas? (Nivel difícil #6)",
+    "options": [
+      "Vinagre",
+      "Bicarbonato",
+      "Azúcar",
+      "Harina"
+    ],
+    "correctIndex": 0
   },
   {
-    "pregunta": "¿Cuál es la función de la sal al batir claras de huevo?",
-    "opciones": {
-      "A": "Dar sabor",
-      "B": "Aumentar la cantidad de espuma",
-      "C": "Estabilizar la espuma",
-      "D": "Bajar la temperatura de batido"
-    },
-    "respuesta_correcta": "C"
+    "category": "Trucos de Cocina",
+    "question": "¿Qué ingrediente ayuda a que las papas fritas queden más crujientes? (Nivel difícil #7)",
+    "options": [
+      "Harina",
+      "Vinagre",
+      "Azúcar",
+      "Limón"
+    ],
+    "correctIndex": 1
   },
   {
-    "pregunta": "¿Qué se puede hacer si una sopa ha quedado demasiado salada?",
-    "opciones": {
-      "A": "Añadir pimienta negra",
-      "B": "Añadir una papa pelada para que absorba la sal",
-      "C": "Echar más aceite",
-      "D": "Servirla con pan"
-    },
-    "respuesta_correcta": "B"
+    "category": "Trucos de Cocina",
+    "question": "¿Qué ingrediente ayuda a que las papas fritas queden más crujientes? (Nivel difícil #8)",
+    "options": [
+      "Harina",
+      "Vinagre",
+      "Azúcar",
+      "Limón"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué se debe hacer para pelar tomates fácilmente? (Nivel difícil #9)",
+    "options": [
+      "Meterlos al congelador",
+      "Cocerlos con piel",
+      "Sumergirlos en agua hirviendo y luego en agua fría",
+      "Usar un cuchillo de sierra"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué ingrediente ayuda a que las papas fritas queden más crujientes? (Nivel difícil #10)",
+    "options": [
+      "Harina",
+      "Vinagre",
+      "Azúcar",
+      "Limón"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué se debe hacer para pelar tomates fácilmente? (Nivel difícil #11)",
+    "options": [
+      "Meterlos al congelador",
+      "Cocerlos con piel",
+      "Sumergirlos en agua hirviendo y luego en agua fría",
+      "Usar un cuchillo de sierra"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué ingrediente ácido ayuda a que las claras de huevo monten mejor al batirlas? (Nivel difícil #12)",
+    "options": [
+      "Vinagre",
+      "Bicarbonato",
+      "Azúcar",
+      "Harina"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué ingrediente ayuda a que las papas fritas queden más crujientes? (Nivel difícil #13)",
+    "options": [
+      "Harina",
+      "Vinagre",
+      "Azúcar",
+      "Limón"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Cuál es el mejor truco para evitar que los huevos se agrieten al hervirlos? (Nivel difícil #14)",
+    "options": [
+      "Añadir sal",
+      "Agregar vinagre",
+      "Pincharlos con una aguja",
+      "Hervirlos a fuego alto"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué ingrediente ácido ayuda a que las claras de huevo monten mejor al batirlas? (Nivel difícil #15)",
+    "options": [
+      "Vinagre",
+      "Bicarbonato",
+      "Azúcar",
+      "Harina"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Cuál es el mejor truco para evitar que los huevos se agrieten al hervirlos? (Nivel difícil #16)",
+    "options": [
+      "Añadir sal",
+      "Agregar vinagre",
+      "Pincharlos con una aguja",
+      "Hervirlos a fuego alto"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué ingrediente ácido ayuda a que las claras de huevo monten mejor al batirlas? (Nivel difícil #17)",
+    "options": [
+      "Vinagre",
+      "Bicarbonato",
+      "Azúcar",
+      "Harina"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué se debe hacer para pelar tomates fácilmente? (Nivel difícil #18)",
+    "options": [
+      "Meterlos al congelador",
+      "Cocerlos con piel",
+      "Sumergirlos en agua hirviendo y luego en agua fría",
+      "Usar un cuchillo de sierra"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Cuál es el mejor truco para evitar que los huevos se agrieten al hervirlos? (Nivel difícil #19)",
+    "options": [
+      "Añadir sal",
+      "Agregar vinagre",
+      "Pincharlos con una aguja",
+      "Hervirlos a fuego alto"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué ingrediente ácido ayuda a que las claras de huevo monten mejor al batirlas? (Nivel difícil #20)",
+    "options": [
+      "Vinagre",
+      "Bicarbonato",
+      "Azúcar",
+      "Harina"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué ingrediente ácido ayuda a que las claras de huevo monten mejor al batirlas? (Nivel difícil #21)",
+    "options": [
+      "Vinagre",
+      "Bicarbonato",
+      "Azúcar",
+      "Harina"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué se recomienda hacer para que el arroz no se pegue? (Nivel difícil #22)",
+    "options": [
+      "Añadir limón",
+      "Enjuagarlo antes de cocer",
+      "Usar olla de hierro",
+      "Remover constantemente"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué ingrediente ácido ayuda a que las claras de huevo monten mejor al batirlas? (Nivel difícil #23)",
+    "options": [
+      "Vinagre",
+      "Bicarbonato",
+      "Azúcar",
+      "Harina"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué se debe hacer para pelar tomates fácilmente? (Nivel difícil #24)",
+    "options": [
+      "Meterlos al congelador",
+      "Cocerlos con piel",
+      "Sumergirlos en agua hirviendo y luego en agua fría",
+      "Usar un cuchillo de sierra"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué se recomienda hacer para que el arroz no se pegue? (Nivel difícil #25)",
+    "options": [
+      "Añadir limón",
+      "Enjuagarlo antes de cocer",
+      "Usar olla de hierro",
+      "Remover constantemente"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Cuál es el mejor truco para evitar que los huevos se agrieten al hervirlos? (Nivel difícil #26)",
+    "options": [
+      "Añadir sal",
+      "Agregar vinagre",
+      "Pincharlos con una aguja",
+      "Hervirlos a fuego alto"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué se debe hacer para pelar tomates fácilmente? (Nivel difícil #27)",
+    "options": [
+      "Meterlos al congelador",
+      "Cocerlos con piel",
+      "Sumergirlos en agua hirviendo y luego en agua fría",
+      "Usar un cuchillo de sierra"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué se debe hacer para pelar tomates fácilmente? (Nivel difícil #28)",
+    "options": [
+      "Meterlos al congelador",
+      "Cocerlos con piel",
+      "Sumergirlos en agua hirviendo y luego en agua fría",
+      "Usar un cuchillo de sierra"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué ingrediente ácido ayuda a que las claras de huevo monten mejor al batirlas? (Nivel difícil #29)",
+    "options": [
+      "Vinagre",
+      "Bicarbonato",
+      "Azúcar",
+      "Harina"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Cuál es el mejor truco para evitar que los huevos se agrieten al hervirlos? (Nivel difícil #30)",
+    "options": [
+      "Añadir sal",
+      "Agregar vinagre",
+      "Pincharlos con una aguja",
+      "Hervirlos a fuego alto"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué ingrediente ayuda a que las papas fritas queden más crujientes? (Nivel difícil #31)",
+    "options": [
+      "Harina",
+      "Vinagre",
+      "Azúcar",
+      "Limón"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué se recomienda hacer para que el arroz no se pegue? (Nivel difícil #32)",
+    "options": [
+      "Añadir limón",
+      "Enjuagarlo antes de cocer",
+      "Usar olla de hierro",
+      "Remover constantemente"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Cuál es el mejor truco para evitar que los huevos se agrieten al hervirlos? (Nivel difícil #33)",
+    "options": [
+      "Añadir sal",
+      "Agregar vinagre",
+      "Pincharlos con una aguja",
+      "Hervirlos a fuego alto"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué ingrediente ácido ayuda a que las claras de huevo monten mejor al batirlas? (Nivel difícil #34)",
+    "options": [
+      "Vinagre",
+      "Bicarbonato",
+      "Azúcar",
+      "Harina"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué ingrediente ayuda a que las papas fritas queden más crujientes? (Nivel difícil #35)",
+    "options": [
+      "Harina",
+      "Vinagre",
+      "Azúcar",
+      "Limón"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué se recomienda hacer para que el arroz no se pegue? (Nivel difícil #36)",
+    "options": [
+      "Añadir limón",
+      "Enjuagarlo antes de cocer",
+      "Usar olla de hierro",
+      "Remover constantemente"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué ingrediente ayuda a que las papas fritas queden más crujientes? (Nivel difícil #37)",
+    "options": [
+      "Harina",
+      "Vinagre",
+      "Azúcar",
+      "Limón"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué se debe hacer para pelar tomates fácilmente? (Nivel difícil #38)",
+    "options": [
+      "Meterlos al congelador",
+      "Cocerlos con piel",
+      "Sumergirlos en agua hirviendo y luego en agua fría",
+      "Usar un cuchillo de sierra"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué ingrediente ácido ayuda a que las claras de huevo monten mejor al batirlas? (Nivel difícil #39)",
+    "options": [
+      "Vinagre",
+      "Bicarbonato",
+      "Azúcar",
+      "Harina"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué se recomienda hacer para que el arroz no se pegue? (Nivel difícil #40)",
+    "options": [
+      "Añadir limón",
+      "Enjuagarlo antes de cocer",
+      "Usar olla de hierro",
+      "Remover constantemente"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué se recomienda hacer para que el arroz no se pegue? (Nivel difícil #41)",
+    "options": [
+      "Añadir limón",
+      "Enjuagarlo antes de cocer",
+      "Usar olla de hierro",
+      "Remover constantemente"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué se debe hacer para pelar tomates fácilmente? (Nivel difícil #42)",
+    "options": [
+      "Meterlos al congelador",
+      "Cocerlos con piel",
+      "Sumergirlos en agua hirviendo y luego en agua fría",
+      "Usar un cuchillo de sierra"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué ingrediente ayuda a que las papas fritas queden más crujientes? (Nivel difícil #43)",
+    "options": [
+      "Harina",
+      "Vinagre",
+      "Azúcar",
+      "Limón"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué se debe hacer para pelar tomates fácilmente? (Nivel difícil #44)",
+    "options": [
+      "Meterlos al congelador",
+      "Cocerlos con piel",
+      "Sumergirlos en agua hirviendo y luego en agua fría",
+      "Usar un cuchillo de sierra"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué ingrediente ácido ayuda a que las claras de huevo monten mejor al batirlas? (Nivel difícil #45)",
+    "options": [
+      "Vinagre",
+      "Bicarbonato",
+      "Azúcar",
+      "Harina"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué se recomienda hacer para que el arroz no se pegue? (Nivel difícil #46)",
+    "options": [
+      "Añadir limón",
+      "Enjuagarlo antes de cocer",
+      "Usar olla de hierro",
+      "Remover constantemente"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Cuál es el mejor truco para evitar que los huevos se agrieten al hervirlos? (Nivel difícil #47)",
+    "options": [
+      "Añadir sal",
+      "Agregar vinagre",
+      "Pincharlos con una aguja",
+      "Hervirlos a fuego alto"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué ingrediente ácido ayuda a que las claras de huevo monten mejor al batirlas? (Nivel difícil #48)",
+    "options": [
+      "Vinagre",
+      "Bicarbonato",
+      "Azúcar",
+      "Harina"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué ingrediente ácido ayuda a que las claras de huevo monten mejor al batirlas? (Nivel difícil #49)",
+    "options": [
+      "Vinagre",
+      "Bicarbonato",
+      "Azúcar",
+      "Harina"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué ingrediente ayuda a que las papas fritas queden más crujientes? (Nivel difícil #50)",
+    "options": [
+      "Harina",
+      "Vinagre",
+      "Azúcar",
+      "Limón"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué ingrediente ayuda a que las papas fritas queden más crujientes? (Nivel difícil #51)",
+    "options": [
+      "Harina",
+      "Vinagre",
+      "Azúcar",
+      "Limón"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué se debe hacer para pelar tomates fácilmente? (Nivel difícil #52)",
+    "options": [
+      "Meterlos al congelador",
+      "Cocerlos con piel",
+      "Sumergirlos en agua hirviendo y luego en agua fría",
+      "Usar un cuchillo de sierra"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Cuál es el mejor truco para evitar que los huevos se agrieten al hervirlos? (Nivel difícil #53)",
+    "options": [
+      "Añadir sal",
+      "Agregar vinagre",
+      "Pincharlos con una aguja",
+      "Hervirlos a fuego alto"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué se debe hacer para pelar tomates fácilmente? (Nivel difícil #54)",
+    "options": [
+      "Meterlos al congelador",
+      "Cocerlos con piel",
+      "Sumergirlos en agua hirviendo y luego en agua fría",
+      "Usar un cuchillo de sierra"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué ingrediente ayuda a que las papas fritas queden más crujientes? (Nivel difícil #55)",
+    "options": [
+      "Harina",
+      "Vinagre",
+      "Azúcar",
+      "Limón"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué se recomienda hacer para que el arroz no se pegue? (Nivel difícil #56)",
+    "options": [
+      "Añadir limón",
+      "Enjuagarlo antes de cocer",
+      "Usar olla de hierro",
+      "Remover constantemente"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué ingrediente ayuda a que las papas fritas queden más crujientes? (Nivel difícil #57)",
+    "options": [
+      "Harina",
+      "Vinagre",
+      "Azúcar",
+      "Limón"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué se recomienda hacer para que el arroz no se pegue? (Nivel difícil #58)",
+    "options": [
+      "Añadir limón",
+      "Enjuagarlo antes de cocer",
+      "Usar olla de hierro",
+      "Remover constantemente"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué se debe hacer para pelar tomates fácilmente? (Nivel difícil #59)",
+    "options": [
+      "Meterlos al congelador",
+      "Cocerlos con piel",
+      "Sumergirlos en agua hirviendo y luego en agua fría",
+      "Usar un cuchillo de sierra"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "category": "Trucos de Cocina",
+    "question": "¿Qué ingrediente ayuda a que las papas fritas queden más crujientes? (Nivel difícil #60)",
+    "options": [
+      "Harina",
+      "Vinagre",
+      "Azúcar",
+      "Limón"
+    ],
+    "correctIndex": 1
   }
 ]
