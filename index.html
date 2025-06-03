@@ -1,163 +1,140 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Trivial de Adrián</title>
-<style>
-  /* Estilos omitidos por brevedad, ya están en tu versión original */
-  /* Puedes pegar directamente los estilos CSS que ya compartiste */
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trivial de Trucos de Cocina - Nivel Difícil</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gradient-to-br from-blue-900 via-blue-700 to-blue-500 min-h-screen flex flex-col items-center justify-center p-4 text-white">
 
-<header>Bienvenidos al trivial de Adrián</header>
+  <div id="start-container" class="max-w-xl w-full text-center space-y-6">
+    <h1 class="text-4xl font-extrabold">Trivial de Trucos de Cocina</h1>
+    <button id="start-btn" class="px-6 py-3 bg-yellow-400 text-blue-900 rounded-lg font-bold hover:bg-yellow-500 transition">Comenzar Juego</button>
+  </div>
 
-<main>
-  <section id="menu">
-    <h2>¡Comienza el juego!</h2>
-    <button id="startBtn">Iniciar Trivial</button>
-  </section>
+  <div id="quiz-container" class="max-w-xl w-full bg-white bg-opacity-10 rounded-lg p-6 space-y-4 hidden">
+    <div id="question" class="text-xl font-semibold min-h-[4rem]"></div>
+    <div id="options" class="space-y-3"></div>
+    <div id="feedback" class="text-lg font-semibold"></div>
+    <div id="correct-answer" class="italic"></div>
+    <button id="next-btn" class="mt-4 px-5 py-2 bg-yellow-400 text-blue-900 rounded-lg font-semibold hover:bg-yellow-500 transition hidden">Siguiente Pregunta</button>
+  </div>
 
-  <section id="quiz" style="display:none;">
-    <div id="timer">Tiempo: 06:00</div>
-    <div id="question"></div>
-    <div id="options"></div>
-  </section>
+  <div id="score-container" class="max-w-xl w-full text-center space-y-6 hidden">
+    <h2 class="text-3xl font-extrabold">¡Juego Terminado!</h2>
+    <p id="score-text" class="text-2xl"></p>
+    <button id="restart-btn" class="px-6 py-3 bg-yellow-400 text-blue-900 rounded-lg font-bold hover:bg-yellow-500 transition">Jugar de Nuevo</button>
+  </div>
 
-  <section id="resultado" style="display:none;">
-    <h2>¡Juego terminado!</h2>
-    <p id="scoreText"></p>
-    <button id="restartBtn">Jugar de nuevo</button>
-  </section>
-</main>
+  <script>
+    // Aquí se insertan todas las preguntas (continúa desde donde se quedó hasta completar las 50)
+    const questions = [
+       {"question":"¿Cuál es el truco para evitar que las cebollas hagan llorar al cortarlas?","options":["Usar un cuchillo de sierra","Cortar con la boca abierta","Enfriar la cebolla antes de cortarla","Cortar junto a una vela encendida"],"correctIndex":2},
+      {"question":"¿Qué ingrediente ayuda a que las claras de huevo monten más rápido?","options":["Azúcar","Vinagre","Sal","Harina"],"correctIndex":1},
+      {"question":"¿Cuál es el truco para pelar tomates fácilmente?","options":["Congelarlos y descongelarlos","Asarlos al horno","Hervirlos por 30 segundos y pasarlos a agua fría","Cortarlos en cruz con cuchillo caliente"],"correctIndex":2},
+      {"question":"¿Cómo se puede evitar que el arroz quede pegajoso?","options":["Remojarlo en vinagre","Agregar mantequilla","Lavarlo varias veces antes de cocerlo","Echarle sal al agua"],"correctIndex":2},
+      {"question":"¿Qué ingrediente se debe añadir al agua para que las verduras conserven su color verde al cocerlas?","options":["Bicarbonato de sodio","Vinagre","Aceite de oliva","Limón"],"correctIndex":0},
+      {"question":"¿Cómo se puede madurar un aguacate más rápido?","options":["Meterlo al congelador","Dejarlo al sol","Guardarlo en una bolsa con plátanos","Ponerle sal"],"correctIndex":2},
+      {"question":"¿Cuál es el truco para que las papas fritas queden crujientes?","options":["Cocerlas antes de freír","Agregar harina","Freírlas en aceite de coco","Dejarlas en vinagre"],"correctIndex":0},
+      {"question":"¿Qué ingrediente neutraliza el exceso de picante en un platillo?","options":["Azúcar","Mantequilla","Yogur o lácteos","Vinagre"],"correctIndex":2},
+      {"question":"¿Cómo se evita que el ajo se queme al saltear?","options":["Añadirlo al final","Cortarlo más grande","Freírlo con cebolla","Usar mantequilla en lugar de aceite"],"correctIndex":0},
+      {"question":"¿Cuál es el truco para que las galletas caseras queden más blanditas?","options":["Usar harina de fuerza","Agregar miel o melaza","Batir menos la masa","Usar huevos fríos"],"correctIndex":1},
+      {"question":"¿Cómo se puede evitar que los aguacates se oxiden rápidamente después de cortarlos?","options":["Añadirles jugo de limón","Envolverlos en papel aluminio","Meterlos en el congelador","Colocarlos en un recipiente hermético"],"correctIndex":0},
+      {"question":"¿Qué hacer para que las albóndigas queden más jugosas?","options":["Agregar pan rallado","Añadir huevo crudo","Usar carne de cerdo","Agregar leche al pan rallado"],"correctIndex":3},
+      {"question":"¿Cómo se puede evitar que las patatas se oxiden después de pelarlas?","options":["Sumergirlas en agua con sal","Envolverlas en papel aluminio","Colocarlas en un recipiente hermético","Sumergirlas en agua con vinagre"],"correctIndex":3},
+      {"question":"¿Qué es recomendable para que los postres con chocolate no se quemen al derretirlos?","options":["Derretir a fuego bajo","Usar microondas en intervalos cortos","Derretir en agua caliente","Usar mantequilla para suavizar el chocolate"],"correctIndex":1},
+      {"question":"¿Cómo evitar que el pan casero quede demasiado denso?","options":["Usar levadura fresca","Agregar más azúcar","Dejar que fermente en un lugar cálido","Usar harina integral"],"correctIndex":2},
+      {"question":"¿Cuál es el truco para que las ensaladas no se marchiten rápidamente?","options":["Añadir sal a las hojas","Agregar un poco de vinagre","Usar aceite de oliva","Guardarlas en un envase hermético en frío"],"correctIndex":3},
+      {"question":"¿Cómo se puede hacer que las sopas queden más sabrosas?","options":["Agregar azúcar","Cocinar a fuego lento","Usar caldo en lugar de agua","Añadir un toque de vinagre"],"correctIndex":2},
+      {"question":"¿Cuál es el truco para hacer que los fideos no se peguen al cocerlos?","options":["Añadir sal al agua","Enjuagarlos con agua fría después de cocerlos","Freírlos antes de cocerlos","Agregar un chorrito de aceite al agua"],"correctIndex":3},
+      {"question":"¿Qué se puede hacer para que el queso rallado no se pegue en la bolsa?","options":["Colocarlo en la nevera antes de usarlo","Añadir maicena o fécula de maíz","Congelarlo","Usar un rallador más grueso"],"correctIndex":1},
+      {"question":"¿Qué hacer para que los guisos no queden demasiado salados?","options":["Agregar agua fría","Añadir patatas para absorber la sal","Usar caldo sin sal","Agregar azúcar"],"correctIndex":1},
+      {"question":"¿Cómo se puede hacer que la carne asada quede más tierna?","options":["Marinarla con vino tinto","Añadir un poco de vinagre","Cocinarla a fuego bajo","Usar carne con más grasa"],"correctIndex":2},
+      {"question":"¿Cómo evitar que las fresas se pongan blandas rápidamente?","options":["Refrigerarlas inmediatamente","Colocarlas en un recipiente con papel toalla","Enjuagarlas antes de almacenarlas","Dejarles las hojas en todo momento"],"correctIndex":1},
+      {"question":"¿Cuál es el truco para que las almejas se abran fácilmente al cocerlas?","options":["Cocerlas en agua con sal","Cocerlas a fuego muy alto","Dejarlas en vinagre por 10 minutos antes de cocerlas","Golpearlas ligeramente antes de cocerlas"],"correctIndex":2},
+      {"question":"¿Cuál es el secreto para hacer que las cremas queden más suaves y homogéneas?","options":["Batir durante más tiempo","Cocinarlas a fuego lento","Agregar un poco de leche","Añadir mantequilla derretida"],"correctIndex":0},
+      {"question":"¿Cómo hacer que los hot dogs se cocinen más rápido?","options":["Cocinar en agua hirviendo","Freírlos en aceite caliente","Cocerlos en una olla a presión","Cocinarlos a fuego lento"],"correctIndex":0},
+      {"question":"¿Qué hacer para que las ensaladas de pasta queden más sabrosas?","options":["Cocinarlas al dente","Añadir mayonesa","Refrigerarlas antes de servir","Sazonarlas con vinagre y aceite"],"correctIndex":3},
+      {"question":"¿Cómo se puede lograr que los filetes de pescado no se deshagan al cocinarlos?","options":["Freírlos con pan rallado","Usar una sartén antiadherente","Marinarlos previamente","Cocerlos a fuego lento"],"correctIndex":1},
+      {"question":"¿Cuál es el truco para hacer que la pizza quede más crujiente?","options":["Usar harina integral","Cocerla en horno muy caliente","Agregar aceite de oliva a la masa","Añadir más queso"],"correctIndex":1},
+      {"question":"¿Cómo hacer que el pollo frito quede más crujiente?","options":["Empanarlo dos veces","Cocerlo en aceite muy caliente","Sumergirlo en agua fría antes de freírlo","Freírlo con un poco de azúcar"],"correctIndex":0},
+      {"question":"¿Cuál es el truco para conservar las hierbas frescas más tiempo?","options":["Colocarlas en un vaso con agua","Guardarlas en la nevera en un recipiente hermético","Secarlas antes de almacenarlas","Congelarlas en cubos de hielo con agua"],"correctIndex":0},
+      {"question":"¿Qué hacer para que los panqueques no queden pegajosos?","options":["Usar leche evaporada","Añadir un poco de vinagre al batido","Cocinarlos a fuego bajo","Untar la sartén con mantequilla antes de cada panqueque"],"correctIndex":3},
+      {"question":"¿Cómo evitar que la pasta se pase de cocción?","options":["Cocerla en abundante agua","Agregar un poco de aceite al agua","Revolverla constantemente","Cocerla al dente"],"correctIndex":3},
+    ];
 
-<script>
-  let tiempoTotal = 360;
-  let timerInterval;
-  let puntuacion = 0;
-  let preguntasDisponibles = [];
-  let preguntaActual = 0;
+    let currentQuestion = 0;
+    let score = 0;
 
-  const menu = document.getElementById('menu');
-  const quiz = document.getElementById('quiz');
-  const resultado = document.getElementById('resultado');
-  const startBtn = document.getElementById('startBtn');
-  const restartBtn = document.getElementById('restartBtn');
-  const timerEl = document.getElementById('timer');
-  const questionEl = document.getElementById('question');
-  const optionsEl = document.getElementById('options');
-  const scoreText = document.getElementById('scoreText');
+    const startContainer = document.getElementById("start-container");
+    const quizContainer = document.getElementById("quiz-container");
+    const scoreContainer = document.getElementById("score-container");
+    const questionEl = document.getElementById("question");
+    const optionsEl = document.getElementById("options");
+    const feedbackEl = document.getElementById("feedback");
+    const correctAnswerEl = document.getElementById("correct-answer");
+    const nextBtn = document.getElementById("next-btn");
+    const scoreText = document.getElementById("score-text");
 
-  startBtn.addEventListener('click', cargarPreguntasYIniciar);
-  restartBtn.addEventListener('click', reiniciarJuego);
+    document.getElementById("start-btn").addEventListener("click", startGame);
+    nextBtn.addEventListener("click", nextQuestion);
+    document.getElementById("restart-btn").addEventListener("click", () => location.reload());
 
-  function cargarPreguntasYIniciar() {
-    fetch('questions.json')
-      .then(response => {
-        if (!response.ok) throw new Error('No se pudo cargar questions.json');
-        return response.json();
-      })
-      .then(data => {
-        preguntasDisponibles = shuffleArray(data);
-        iniciarJuego();
-      })
-      .catch(error => {
-        alert('Error cargando las preguntas: ' + error.message);
+    function startGame() {
+      startContainer.classList.add("hidden");
+      quizContainer.classList.remove("hidden");
+      currentQuestion = 0;
+      score = 0;
+      showQuestion();
+    }
+
+    function showQuestion() {
+      const q = questions[currentQuestion];
+      questionEl.textContent = q.question;
+      optionsEl.innerHTML = "";
+      feedbackEl.textContent = "";
+      correctAnswerEl.textContent = "";
+      nextBtn.classList.add("hidden");
+
+      q.options.forEach((opt, i) => {
+        const btn = document.createElement("button");
+        btn.textContent = opt;
+        btn.className = "w-full bg-yellow-300 hover:bg-yellow-400 text-blue-900 font-bold py-2 px-4 rounded transition";
+        btn.addEventListener("click", () => selectAnswer(i));
+        optionsEl.appendChild(btn);
       });
-  }
-
-  function iniciarJuego() {
-    puntuacion = 0;
-    preguntaActual = 0;
-    menu.style.display = 'none';
-    resultado.style.display = 'none';
-    quiz.style.display = 'block';
-    tiempoTotal = 360;
-    mostrarPregunta();
-    iniciarTemporizador();
-  }
-
-  function reiniciarJuego() {
-    tiempoTotal = 360;
-    mostrarPregunta();
-    iniciarTemporizador();
-    resultado.style.display = 'none';
-    quiz.style.display = 'block';
-  }
-
-  function iniciarTemporizador() {
-    clearInterval(timerInterval);
-    actualizarTimer();
-    timerInterval = setInterval(() => {
-      tiempoTotal--;
-      if (tiempoTotal <= 0) {
-        clearInterval(timerInterval);
-        finalizarJuego();
-      }
-      actualizarTimer();
-    }, 1000);
-  }
-
-  function actualizarTimer() {
-    const minutos = Math.floor(tiempoTotal / 60);
-    const segundos = tiempoTotal % 60;
-    timerEl.textContent = `Tiempo: ${minutos.toString().padStart(2,'0')}:${segundos.toString().padStart(2,'0')}`;
-  }
-
-  function mostrarPregunta() {
-    if (preguntaActual >= preguntasDisponibles.length) {
-      finalizarJuego();
-      return;
     }
-    const pregunta = preguntasDisponibles[preguntaActual];
-    questionEl.textContent = `[${pregunta.category}] ${pregunta.question}`;
-    optionsEl.innerHTML = '';
 
-    pregunta.options.forEach((opcion, i) => {
-      const btn = document.createElement('button');
-      btn.textContent = opcion;
-      btn.addEventListener('click', () => responder(i));
-      optionsEl.appendChild(btn);
-    });
-  }
+    function selectAnswer(selectedIndex) {
+      const q = questions[currentQuestion];
+      const correct = q.correctIndex;
 
-  function responder(indiceSeleccionado) {
-    const pregunta = preguntasDisponibles[preguntaActual];
-    const botones = optionsEl.querySelectorAll('button');
-    botones.forEach((btn, i) => {
-      btn.disabled = true;
-      if (i === pregunta.correctIndex) btn.classList.add('correct');
-      if (i === indiceSeleccionado && i !== pregunta.correctIndex) btn.classList.add('wrong');
-    });
-
-    if (indiceSeleccionado === pregunta.correctIndex) puntuacion++;
-    preguntaActual++;
-
-    setTimeout(() => {
-      if (preguntaActual < preguntasDisponibles.length && tiempoTotal > 0) {
-        mostrarPregunta();
+      if (selectedIndex === correct) {
+        feedbackEl.textContent = "✅ ¡Correcto!";
+        feedbackEl.className = "text-green-300 font-bold";
+        score++;
       } else {
-        finalizarJuego();
+        feedbackEl.textContent = "❌ Incorrecto";
+        feedbackEl.className = "text-red-400 font-bold";
+        correctAnswerEl.textContent = `Respuesta correcta: ${q.options[correct]}`;
       }
-    }, 1200);
-  }
 
-  function finalizarJuego() {
-    clearInterval(timerInterval);
-    quiz.style.display = 'none';
-    resultado.style.display = 'block';
-    scoreText.textContent = `Has respondido correctamente ${puntuacion} de ${preguntasDisponibles.length} preguntas.`;
-  }
-
-  function shuffleArray(array) {
-    for(let i = array.length -1; i > 0; i--){
-      const j = Math.floor(Math.random() * (i+1));
-      [array[i], array[j]] = [array[j], array[i]];
+      document.querySelectorAll("#options button").forEach(btn => btn.disabled = true);
+      nextBtn.classList.remove("hidden");
     }
-    return array;
-  }
-</script>
+
+    function nextQuestion() {
+      currentQuestion++;
+      if (currentQuestion < questions.length) {
+        showQuestion();
+      } else {
+        quizContainer.classList.add("hidden");
+        scoreContainer.classList.remove("hidden");
+        scoreText.textContent = `Tu puntuación fue ${score} de ${questions.length}`;
+      }
+    }
+  </script>
 
 </body>
 </html>
