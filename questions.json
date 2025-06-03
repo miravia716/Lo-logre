@@ -659,4 +659,356 @@
     ],
     "correctIndex": 1
   }
+[
+  {
+    "pregunta": "¿Qué empresa desarrolló el sistema operativo Android originalmente?",
+    "opciones": ["Google", "Samsung", "Android Inc.", "Motorola"],
+    "respuesta_correcta": "Android Inc.",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Cuál fue el primer iPhone con reconocimiento facial (Face ID)?",
+    "opciones": ["iPhone 8", "iPhone X", "iPhone XS", "iPhone 7 Plus"],
+    "respuesta_correcta": "iPhone X",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Qué tipo de pantalla utiliza el Samsung Galaxy S22 Ultra?",
+    "opciones": ["LCD", "IPS", "AMOLED", "TFT"],
+    "respuesta_correcta": "AMOLED",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Qué lenguaje se usa comúnmente para desarrollar apps en Android?",
+    "opciones": ["Kotlin", "Swift", "JavaScript", "Objective-C"],
+    "respuesta_correcta": "Kotlin",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Qué significa la sigla NFC en dispositivos móviles?",
+    "opciones": ["New Frequency Channel", "Near Field Communication", "Network File Connection", "Next Function Code"],
+    "respuesta_correcta": "Near Field Communication",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Cuál fue el primer móvil con sistema operativo Android?",
+    "opciones": ["HTC Dream", "Motorola Droid", "Samsung Galaxy", "LG Optimus"],
+    "respuesta_correcta": "HTC Dream",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Difícil"
+  },
+  {
+    "pregunta": "¿Qué fabricante lanzó el primer smartphone con cámara de 108 MP?",
+    "opciones": ["Xiaomi", "Samsung", "Huawei", "Sony"],
+    "respuesta_correcta": "Xiaomi",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Difícil"
+  },
+  {
+    "pregunta": "¿Qué tecnología permite cargar un teléfono sin conectarlo físicamente?",
+    "opciones": ["Carga inversa", "Carga rápida", "Carga inalámbrica", "Carga paralela"],
+    "respuesta_correcta": "Carga inalámbrica",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Qué es AOSP en el contexto de Android?",
+    "opciones": ["Android Official Security Protocol", "Android Open Source Project", "Advanced Operating System Program", "App Optimization Service Platform"],
+    "respuesta_correcta": "Android Open Source Project",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Difícil"
+  },
+  {
+    "pregunta": "¿Qué chip de Apple introdujo por primera vez el Neural Engine?",
+    "opciones": ["A11 Bionic", "A12 Bionic", "A10 Fusion", "M1"],
+    "respuesta_correcta": "A11 Bionic",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Difícil"
+  },
+  {
+    "pregunta": "¿Qué sistema operativo móvil fue descontinuado por Microsoft?",
+    "opciones": ["Windows Mobile", "Symbian", "Tizen", "WebOS"],
+    "respuesta_correcta": "Windows Mobile",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Cuál fue el nombre del asistente virtual original de Samsung?",
+    "opciones": ["Siri", "Bixby", "Cortana", "S Voice"],
+    "respuesta_correcta": "S Voice",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Qué versión de Android introdujo el modo oscuro nativo?",
+    "opciones": ["Pie", "Oreo", "Nougat", "Q"],
+    "respuesta_correcta": "Q",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Cuál es el nombre del lenguaje de programación oficial para iOS?",
+    "opciones": ["Java", "Swift", "Kotlin", "Dart"],
+    "respuesta_correcta": "Swift",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Qué empresa desarrolló el sistema operativo móvil HarmonyOS?",
+    "opciones": ["Huawei", "Xiaomi", "Google", "LG"],
+    "respuesta_correcta": "Huawei",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Qué dispositivo popularizó el formato phablet?",
+    "opciones": ["iPhone 6 Plus", "Galaxy Note", "Nexus 6", "Pixel XL"],
+    "respuesta_correcta": "Galaxy Note",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Cuál fue la principal novedad del iPhone 14 Pro?",
+    "opciones": ["Dynamic Island", "Carga USB-C", "Botón Home", "Pantalla LCD"],
+    "respuesta_correcta": "Dynamic Island",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Qué empresa fabrica los procesadores Snapdragon?",
+    "opciones": ["Intel", "Qualcomm", "MediaTek", "Samsung"],
+    "respuesta_correcta": "Qualcomm",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Qué tecnología permite desbloquear móviles con la huella en la pantalla?",
+    "opciones": ["Touch ID", "Face ID", "Sensor óptico en pantalla", "Escáner ultrasónico"],
+    "respuesta_correcta": "Escáner ultrasónico",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Difícil"
+  },
+  {
+    "pregunta": "¿Cuál es la función principal de la tecnología UWB (Ultra Wideband)?",
+    "opciones": ["Transferencia de archivos", "Posicionamiento preciso", "Cargar más rápido", "Reforzar Wi-Fi"],
+    "respuesta_correcta": "Posicionamiento preciso",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Difícil"
+  },
+  {
+    "pregunta": "¿Cuál fue el primer iPhone sin puerto de auriculares de 3.5 mm?",
+    "opciones": ["iPhone 6s", "iPhone 7", "iPhone 8", "iPhone X"],
+    "respuesta_correcta": "iPhone 7",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Qué sistema de Google reemplazó a Hangouts?",
+    "opciones": ["Google Chat", "Google Duo", "Google Allo", "Google Meet"],
+    "respuesta_correcta": "Google Chat",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Qué versión de Android eliminó el soporte nativo para apps de 32 bits?",
+    "opciones": ["Android 11", "Android 12", "Android 13", "Android 14"],
+    "respuesta_correcta": "Android 14",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Difícil"
+  },
+  {
+    "pregunta": "¿Qué dispositivo móvil usó por primera vez Gorilla Glass Victus?",
+    "opciones": ["Galaxy Note 20 Ultra", "iPhone 12 Pro", "Pixel 5", "OnePlus 8T"],
+    "respuesta_correcta": "Galaxy Note 20 Ultra",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Difícil"
+  },
+  {
+    "pregunta": "¿Qué tipo de conector usa el iPad Pro (2021)?",
+    "opciones": ["Lightning", "USB-C", "MicroUSB", "Thunderbolt 2"],
+    "respuesta_correcta": "USB-C",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Qué marca lanzó el sistema operativo Tizen?",
+    "opciones": ["Samsung", "Sony", "HTC", "Lenovo"],
+    "respuesta_correcta": "Samsung",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Difícil"
+  },
+  {
+    "pregunta": "¿Cuál es el nombre del procesador de gama alta de MediaTek?",
+    "opciones": ["Snapdragon", "Dimensity", "Helio", "Kirin"],
+    "respuesta_correcta": "Dimensity",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Qué dispositivo introdujo por primera vez el notch?",
+    "opciones": ["iPhone X", "Essential Phone", "Pixel 2 XL", "LG G7"],
+    "respuesta_correcta": "Essential Phone",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Difícil"
+  },
+  {
+    "pregunta": "¿Qué estándar de Wi-Fi se conoce como Wi-Fi 6?",
+    "opciones": ["802.11ac", "802.11n", "802.11ax", "802.11ad"],
+    "respuesta_correcta": "802.11ax",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Qué aplicación de mensajería introdujo el cifrado de extremo a extremo primero?",
+    "opciones": ["Telegram", "WhatsApp", "iMessage", "Signal"],
+    "respuesta_correcta": "Signal",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Difícil"
+  }
+[
+  {
+    "pregunta": "¿Qué empresa fue la primera en lanzar un smartphone con cámara frontal para selfies?",
+    "opciones": ["Apple", "Samsung", "HTC", "Sony"],
+    "respuesta_correcta": "Sony",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Qué tecnología permite que los móviles se conecten directamente entre sí sin usar internet?",
+    "opciones": ["Bluetooth", "Wi-Fi Direct", "NFC", "LTE"],
+    "respuesta_correcta": "Wi-Fi Direct",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Difícil"
+  },
+  {
+    "pregunta": "¿Qué sistema operativo móvil está basado en Linux y es desarrollado por Samsung?",
+    "opciones": ["Android", "Tizen", "Firefox OS", "Ubuntu Touch"],
+    "respuesta_correcta": "Tizen",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Difícil"
+  },
+  {
+    "pregunta": "¿Qué significa la tecnología 'Fast Charging' en móviles?",
+    "opciones": ["Carga con menos calor", "Carga rápida de batería", "Carga inalámbrica", "Carga invertida"],
+    "respuesta_correcta": "Carga rápida de batería",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Qué tipo de memoria RAM se utiliza más en smartphones modernos para mayor eficiencia energética?",
+    "opciones": ["DDR3", "DDR4", "LPDDR4X", "LPDDR5"],
+    "respuesta_correcta": "LPDDR5",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Difícil"
+  },
+  {
+    "pregunta": "¿Qué función tiene el modem 5G en un teléfono móvil?",
+    "opciones": ["Mejorar la cámara", "Conectar a redes 5G", "Aumentar la duración de batería", "Procesar datos de IA"],
+    "respuesta_correcta": "Conectar a redes 5G",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Qué característica diferencia a los móviles con pantalla OLED de los LCD?",
+    "opciones": ["Mayor consumo de energía", "Mejor contraste y negros puros", "Más baratos", "Mayor peso"],
+    "respuesta_correcta": "Mejor contraste y negros puros",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Qué significa la función 'Dual SIM' en un smartphone?",
+    "opciones": ["Tiene dos cámaras", "Soporta dos tarjetas SIM", "Permite doble carga rápida", "Tiene dos pantallas"],
+    "respuesta_correcta": "Soporta dos tarjetas SIM",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Cuál fue el primer smartphone en usar un sensor de huellas ultrasónico?",
+    "opciones": ["Samsung Galaxy S10", "OnePlus 6T", "Huawei Mate 20 Pro", "iPhone X"],
+    "respuesta_correcta": "Samsung Galaxy S10",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Difícil"
+  },
+  {
+    "pregunta": "¿Qué tecnología móvil utiliza ondas milimétricas para comunicación 5G?",
+    "opciones": ["Sub-6 GHz", "Wi-Fi 6", "mmWave", "Bluetooth 5.0"],
+    "respuesta_correcta": "mmWave",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Difícil"
+  },
+  {
+    "pregunta": "¿Qué nombre recibe el conector de carga estándar para la mayoría de móviles Android actuales?",
+    "opciones": ["Lightning", "MicroUSB", "USB-C", "Proprietary"],
+    "respuesta_correcta": "USB-C",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Cuál es la capacidad máxima estándar de batería en miliamperios hora (mAh) para móviles en 2024?",
+    "opciones": ["3000 mAh", "5000 mAh", "7000 mAh", "10000 mAh"],
+    "respuesta_correcta": "7000 mAh",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Difícil"
+  },
+  {
+    "pregunta": "¿Qué función tiene el 'Modo avión' en un teléfono móvil?",
+    "opciones": ["Aumenta la señal", "Desactiva las comunicaciones inalámbricas", "Activa GPS", "Reduce brillo"],
+    "respuesta_correcta": "Desactiva las comunicaciones inalámbricas",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Qué fabricante desarrolló el procesador Kirin para móviles?",
+    "opciones": ["Samsung", "Huawei", "MediaTek", "Qualcomm"],
+    "respuesta_correcta": "Huawei",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Difícil"
+  },
+  {
+    "pregunta": "¿Qué año se lanzó el sistema operativo Android 10?",
+    "opciones": ["2017", "2018", "2019", "2020"],
+    "respuesta_correcta": "2019",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Qué significa que un teléfono sea 'rooted' o tenga 'jailbreak'?",
+    "opciones": ["Está desbloqueado para modificar sistema operativo", "Tiene garantía extendida", "Está bloqueado por operador", "Tiene cámara desbloqueada"],
+    "respuesta_correcta": "Está desbloqueado para modificar sistema operativo",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Difícil"
+  },
+  {
+    "pregunta": "¿Qué estándar de Bluetooth es el más común en smartphones modernos?",
+    "opciones": ["Bluetooth 4.0", "Bluetooth 5.0", "Bluetooth 3.0", "Bluetooth 2.1"],
+    "respuesta_correcta": "Bluetooth 5.0",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Qué tecnología ayuda a reducir el consumo de batería en pantallas OLED?",
+    "opciones": ["HDR", "Always on Display", "Modo oscuro", "Refresh Rate variable"],
+    "respuesta_correcta": "Modo oscuro",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Cuál es la función principal del GPS en un smartphone?",
+    "opciones": ["Medir la velocidad de internet", "Localización geográfica", "Mejorar la cámara", "Aumentar la batería"],
+    "respuesta_correcta": "Localización geográfica",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Intermedio"
+  },
+  {
+    "pregunta": "¿Qué es el 'bootloader' en un teléfono móvil?",
+    "opciones": ["Programa que inicia el sistema operativo", "Aplicación de cámara", "Conector de carga", "Sensor de huellas"],
+    "respuesta_correcta": "Programa que inicia el sistema operativo",
+    "categoria": "Tecnología Móvil",
+    "nivel": "Difícil"
+  }
 ]
